@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html style="height:100%">
+<head>
+<title>人性動物園</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8" />
+<link rel="Shortcut Icon" type="image/x-icon" href="assets/icon.ico">
+<link rel=stylesheet type="text/css" href="https://unpkg.com/reset-css@4.0.1/reset.css">
+<link rel=stylesheet type="text/css" href="mystyle.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    //    ----loading---- 
+    function loading(){
+    setTimeout(showPage, 3000);
+    }
+    function showPage() {
+        $("#loader").css("opacity","0");
+        $("#loader").css("z-index","-20");
+        $("#main").css("display","block");
+    }
+</script>
+<!--<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>-->
+</head>
+<body onload="loading()"> 
+    <div id=loader>
+        <div>
+            <img width=100px src="assets/loading.png">
+            <h2>L O A D I N G ...</h2>
+        </div>
+    </div>
+    <div class=row>
+        <div class=title>
+        <div id=main>
+            <img src="assets/logo.png">
+            <input onkeydown="keyenter()" type="text" name="uname" type=text placeholder="輸入你的名字" autocomplete="off" required>
+            <button id=start onclick="enter()">開始</button>
+        </div>
+        </div>
+        <div class="question q1">
+            <img src="assets/zebra.png">
+            <div class="quest"><h1><strong>A</strong><em>現在，你單獨一個人，在一個陌生城市中遊盪。忽然逛進了一個私人動物園，共有三個園區，每一個你都會逛到。你會先前往：</em>
+                </h1>
+                <div>
+                <button data-item=A data-score=0>可愛動物區</button>
+                <button data-item=B data-score=2>兇猛動物區</button>
+                <button data-item=C data-score=1>稀有動物區</button>
+                </div>
+            </div>
+        </div>
+        <div class="question q2">
+            <img src="assets/lion.png">
+            <div class="quest"><h1><strong>B</strong><em>逛到了猴園，你看到了一群猴子向你要東西吃，猴籠旁有個自動販賣機，共有三種食品，你會給他們吃什麼？</em></h1>
+            <div>
+                <button data-item=D data-score=0>一根十元的香蕉</button>
+                <button data-item=E data-score=1>一包三十元的花生</button>
+                <button data-item=F data-score=2>一包十元的炸馬鈴薯片</button>
+                <button data-item=G data-score=3>不買，反正猴子一定有人養</button>
+                </div></div>
+        </div>
+        <div class="question q3">
+            <img src="assets/hippo.png">
+            <div class="quest"><h1><strong>C</strong><em>假設你很好心的餵了猴子，其中有一隻猴子得了便宜還賣乖，對你做出猥褻動作，此時四下無人，你會：</em></h1>
+            <div>
+                <button data-item=H data-score=2>撿起地上的花生殼丟牠</button>
+                <button data-item=I data-score=1>對他做鬼臉以示報復</button>
+                <button data-item=J data-score=0>掉頭就走</button>
+                <button data-item=K data-score=3>也對他做猥褻動作</button>
+                <button data-item=L data-score=4>拿石頭丟牠</button>
+                </div></div>
+        </div>
+        <div class="question q4">
+            <img src="assets/giraffe.png">
+            <div class="quest"><h1><strong>D</strong><em>這時主人出來了，他養了一隻會特技表演的白猴子，想給你看表演，你會想看牠：</em></h1>
+            <div>
+                <button data-item=M data-score=0>騎單車</button>
+                <button data-item=N data-score=1>跳芭蕾舞</button>
+                <button data-item=O data-score=2>跳火圈</button>
+                <button data-item=P data-score=3>吞劍</button>
+                </div></div>
+        </div>
+        <div class="question q5">
+            <img src="assets/elephant.png">
+            <div class="quest"><h1><strong>E</strong><em>主人還養了一些保證已馴服的野獸，願意讓你和其中一種照相，你會選擇哪一種合照？</em></h1>
+            <div>
+                <button data-item=Q data-score=1>坐在剛表演的那隻白猴子旁</button>
+                <button data-item=R data-score=3>蹲在老虎旁邊</button>
+                <button data-item=S data-score=2>騎在馬上</button>
+                <button data-item=T data-score=0>抱著主人家的吉娃娃狗</button>
+                </div></div>
+        </div>
+        <div id="resultloader">
+            <div style="animation-delay:0s;"></div>
+            <div style="animation-delay:0.1s;"></div>
+            <div style="animation-delay:0.2s;"></div>
+        </div>
+    </div>
+    <div class="final">
+        <div id="omg">
+            <div class="result">
+                <h1 id=user></h1>
+                <ul>
+                    <img src="assets/chameleon.png"><img id="bird" src="assets/bird.png"s>
+                    <li data-content="A" data-score=0 style="display:none;">你想感情平順穩定，情人越好相處越好，大家細水長流過好日子。</li>
+                    <li data-content="B" data-score=2 style="display:none;">你有比別人多一點的激情，想找個辣得有勁的傢伙當對象，不想活得這麼無聊。</li>
+                    <li data-content="C" data-score=1 style="display:none;">你希望對象能夠出類拔萃、卓爾不凡，值得你崇拜，提昇你的生活層次。</li>
+                    <li data-content="D" data-score=0 style="display:none;">你常做僧多粥少的選擇；你常常低估朋友或情人需要你的程度。</li>
+                    <li data-content="E" data-score=1 style="display:none;">你會盡力讓身旁的人「利益均霑」，是個體貼人的人，很注重每個人的感受。</li>
+                    <li data-content="F" data-score=2 style="display:none;">你常想對人家好，卻因悟性遲鈍而用錯方式。</li>
+                    <li data-content="G" data-score=3 style="display:none;">你總是找藉口不要付出自己的關心，在別人眼中漸變成一個有求不應的人。</li>
+                    <li data-content="H" data-score=2 style="display:none;">你總是有仇必報，只是威力不強。</li>
+                    <li data-content="I" data-score=1 style="display:none;">你常常表面上無所謂，但在背地裡會說他壞話以資報復。</li>
+                    <li data-content="J" data-score=0 style="display:none;">你總是自認倒楣，算了，但會記取教訓。</li>
+                    <li data-content="K" data-score=3 style="display:none;">你常常想以牙還牙，但報復方式實在可笑，只會損人不利已。</li>
+                    <li data-content="L" data-score=4 style="display:none;">你很難給別人安全感，因為你的報復心太強，EQ實在太低了。</li>
+                    <li data-content="M" data-score=0 style="display:none;">你不會對情人或朋友要求太高，是個好好先生/小姐，不會為難別人。</li>
+                    <li data-content="N" data-score=1 style="display:none;">你是有點挑剔的完美主義者，自認為有文化涵養，但只要對了你的味，就不難與你在一起。</li>
+                    <li data-content="O" data-score=2 style="display:none;">你待己比較寬，律人甚嚴，對周遭的人要求很多，要別人為你赴湯蹈火，你才會付出真心。</li>
+                    <li data-content="P" data-score=3 style="display:none;">你簡直不顧別人死活，天性兇殘，和你相處久的人，非死即傷…</li>
+                    <li data-content="Q" data-score=1 style="display:none;">你不是一個積極求突破的人，活得有點懶洋洋的，但你願意善待對你好的人，並且給他幸福。</li>
+                    <li data-content="R" data-score=3 style="display:none;">你不斷接受挑戰，對你來說才有征服感，才有成就感。</li>
+                    <li data-content="S" data-score=2 style="display:none;">你喜歡穩紮穩打的人生，在現有的基礎上繼續往前走。</li>
+                    <li data-content="T" data-score=0 style="display:none;">你總是挑最容易的路走，很難接受生活中的挑戰，總是覺得改變生活「太難了」！</li>
+            </ul>
+                <div>
+                    <a href="https://www.freepik.com/free-vector/funny-collection-of-hand-drawn-animals_1056815.htm">Animal picture by Freepik</a>
+                    <a href="http://goo.gl/nkA87d">Text source by ARSIM</a>
+                </div>
+            </div>
+               <h2>在動物園中，你是：羊駝</h2>
+               <img id="resultimg" src="assets/result5.png">
+            </div>
+        </div>
+        
+<script>   
+//    ----輸入名字---- 
+    
+    function keyenter() {
+        x = event.keyCode || event.which;
+        if (x == 13) {
+            $("#start").click(enter());
+            $("#start").css("border","1px outset #fff");
+        }
+    }
+    
+    function enter() {
+        var name = $("input").val();
+        if (name.length> 0) {
+            $(".title").css("left", "-100%" );
+            $("#user").html(name + " 的測驗結果");
+        }
+            else {
+                alert("請填入名字");
+            }
+    }
+    
+//    ----測驗選項對應結果----  
+    $(".question button").click(function(){
+        var x = $(this).parents(".question").css("left");
+        $(this).parents(".question").css("left", "calc( " + x + " - 100% )" );
+        $(this).parents(".question").next().css("opacity","1");
+//        $(this).parents(".question").css("opacity","0");
+        var y = $(this).data("item");
+        var i
+        var z = document.getElementById("omg").getElementsByTagName("li");
+        for (i=0; i< z.length; i++){
+        if (y==z[i].dataset.content) {
+            z[i].style.display ="block";
+        }};
+    });
+    
+//    ----動物動畫----
+    
+    $(".q1 button").click(function(){
+        $(".q1 img").attr("src","assets/zebra1.png");
+        $(".q1 img").css("animation","1s swing infinite");
+        
+    });
+    $(".q2 button").click(function(){
+        $(".q2 img").attr("src","assets/lion1.png");
+        $(".q2 img").css("animation","1s bounce infinite");
+    });
+    $(".q3 button").click(function(){
+        $(".q3 img").attr("src","assets/hippo1.png");
+        $(".q3 img").css("animation","1s swing infinite");
+    });
+    $(".q4 button").click(function(){
+        $(".q4 img").attr("src","assets/giraffe1.png");
+        $(".q4 img").css("animation","1s bounce infinite");
+    });
+    $(".q5 button").click(function(){
+        $(".q5 img").attr("src","assets/elephant1.png");
+        $(".q5 img").css("animation","1s swing infinite");
+    });
+    
+//    ----result loading及結算----
+    $(document).ready(function(){
+        var total = 0;
+        $(".question button").click(function(){
+            total = total + Number($(this).attr("data-score"));
+        });
+    $(".q5 button").click(function(){
+        $("#resultloader").css("display","block");
+        setTimeout(showResult, 2000);
+        function showResult() {
+            $("body").css("height","auto");
+            $(".final").css("background-image","none")
+            $(".final").css("opacity","1");
+            $("#resultloader").css("display","none");
+            $("#omg").css("display","flex");
+        }
+        if (total>0 && total<=5) {
+            $("#resultimg").attr("src","assets/result2.png");
+            $("#omg h2").text("在動物園中，你是：熊貓");
+        }
+        else if (total>5 && total<=10) {
+            $("#resultimg").attr("src","assets/result3.png");
+            $("#omg h2").text("在動物園中，你是：河馬");
+        }
+        else if (total>10) {
+            $("#resultimg").attr("src","assets/result4.png");
+            $("#omg h2").text("在動物園中，你是：獅子");
+        }
+    });
+    });
+    
+//    ----鳥圖hover效果----
+    $("#bird").mouseover(function(){
+        $("#bird").attr("src","assets/bird1.png");
+    });
+    $("#bird").mouseout(function(){
+        $("#bird").attr("src","assets/bird.png");
+    });
+    
+    </script>
+    </body>
+</html>
