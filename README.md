@@ -17,11 +17,11 @@
 ### 輸入名稱
 也可按Enter開始
 
-![輸入名稱](https://scontent.ftpe14-1.fna.fbcdn.net/v/t1.15752-9/248969875_1080597559411507_646246396305363809_n.png?_nc_cat=106&ccb=1-5&_nc_sid=ae9488&_nc_ohc=FwvheTSkYc4AX_x37rn&tn=TdA9onnXh9u24ZSP&_nc_ht=scontent.ftpe14-1.fna&oh=55f12ff9878e91404807971fbe210a6a&oe=61A03C17)
+![輸入名稱](https://i.imgur.com/DU7anjd.png)
 ### 問答頁面
-![關於我們](https://scontent.ftpe14-1.fna.fbcdn.net/v/t1.15752-9/247130360_736486860644155_3945750175537256333_n.png?_nc_cat=100&ccb=1-5&_nc_sid=ae9488&_nc_ohc=RVYH0BUKteUAX8BlkLT&_nc_ht=scontent.ftpe14-1.fna&oh=53d206ec78a970488746048bf6ec5164&oe=619FCEDA)
+![問答頁面](https://i.imgur.com/ivjoLCN.png)
 ### 測驗結果
-![商店頁面](https://scontent.ftpe14-1.fna.fbcdn.net/v/t1.15752-9/246323353_924414234824117_8450757342512691375_n.png?_nc_cat=110&ccb=1-5&_nc_sid=ae9488&_nc_ohc=GXvNfPixzD4AX8huSmB&tn=TdA9onnXh9u24ZSP&_nc_ht=scontent.ftpe14-1.fna&oh=0ed5f9fae613d856189d0333b777dd65&oe=61A248A3)
+![測驗結果](https://i.imgur.com/lPxXmeI.png)
 ## 資料&圖片來源
 * [PTT心理測驗版](https://www.ptt.cc/bbs/Mind/M.1415370812.A.A81.html)
 * [freepik](https://www.freepik.com/)
